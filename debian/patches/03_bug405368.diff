@@ -1,0 +1,29 @@
+--- ../orig/angrydd-1.0.1/angrydd.6	2006-01-12 22:19:27.000000000 +0100
++++ angrydd.6	2007-01-13 21:42:20.000000000 +0100
+@@ -51,11 +51,11 @@
+ Display copyright and version information.
+ .SH USAGE
+ Player 1's controls are w, a, s, d for up, left, down, right, q for rotate
+-counter-clockwise, e for clockwise, and Enter for start. Player 1 can also
++counter-clockwise, e for clockwise, and Enter or 1 for start. Player 1 can also
+ use the arrow keys to move.
+ .PP
+ Player 2's controls are i, j, k, l for up, left, down, right, u for rotate
+-counter-clockwise, o for clockwise, and backspace for start.
++counter-clockwise, o for clockwise, and backspace or 2 for start.
+ .PP
+ Pressing 'p' during a game will pause it. Pressing escape will usually
+ take you back to the menu.
+--- ../orig/angrydd-1.0.1/howtoplay.py	2004-09-04 05:51:59.000000000 +0200
++++ howtoplay.py	2007-01-13 20:21:38.000000000 +0100
+@@ -142,7 +142,9 @@
+             "in the middle. These gems don't form crystals, but otherwise "
+             "break like normal colored gems. When you break one of these, "
+             "you 'pick up' the special attack in it.",
+-            "To use the attack, press start (enter/2). There are five basic "
++            "To use the attack, press start "
++	    "(left player: enter or 1, right player: backspace or 2). "
++	    "There are five basic "
+             "attacks; from left to right: make your opponent's field blink, "
+             "clear  your own field of all blocks,",
+             "flip your opponent's screen upside down, disable the 'next' "

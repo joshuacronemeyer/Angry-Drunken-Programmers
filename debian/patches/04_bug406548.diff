@@ -1,0 +1,47 @@
+--- ../orig/angrydd-1.0.1/angrydd.6	2006-01-12 22:19:27.000000000 +0100
++++ angrydd.6	2007-01-13 21:53:28.000000000 +0100
+@@ -60,6 +60,8 @@
+ Pressing 'p' during a game will pause it. Pressing escape will usually
+ take you back to the menu.
+ .PP
++Pressing 'f' or F11 makes the game switch between fullscreen and window mode.
++.PP
+ The game is designed to be played with joysticks or gamepads as well;
+ the directionals will move, the buttons rotate, start is start,
+ and select is pause.
+--- ../orig/angrydd-1.0.1/angrydd.py	2006-01-12 22:19:27.000000000 +0100
++++ angrydd.py	2007-01-13 19:05:10.000000000 +0100
+@@ -151,6 +151,7 @@
+     import menu
+     config_menu = [
+         (config.get_matches(), menu.entry(config.set_matches)),
++        (config.get_fullscreen(), menu.entry(config.set_fullscreen)),
+         (config.get_speed(), menu.entry(config.set_speed)),
+         (config.get_rotup(), menu.entry(config.set_rotup)),
+         (config.get_space(), menu.entry(config.set_space)),
+--- ../orig/angrydd-1.0.1/config.py	2004-09-09 02:38:52.000000000 +0200
++++ config.py	2007-01-13 21:34:51.000000000 +0100
+@@ -6,6 +6,7 @@
+ import os
+ from ConfigParser import ConfigParser
+ from constants import *
++from pygame import display
+ 
+ _config = ConfigParser()
+ 
+@@ -111,6 +112,15 @@
+     platform.text = get_rotup()
+     return False
+ 
++def set_fullscreen(menu, platform, pos, key):
++    display.toggle_fullscreen()
++    platform.text = get_fullscreen()
++    return False
++
++def get_fullscreen():
++    if _config.getboolean("settings", "fullscreen"): return "Full Screen Mode"
++    else: return "Window Mode"
++
+ def get_rotup():
+     if _config.getboolean("settings", "rotate_on_up"): return "Up Rotates"
+     else: return "Up Doesn't Rotate"

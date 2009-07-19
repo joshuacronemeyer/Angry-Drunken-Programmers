@@ -1,0 +1,62 @@
+Angry, Drunken Dwarves      http://www.sacredchao.net/~piman/angrydd/index.html
+-------------------------------------------------------------------------------
+
+In Angry, Drunken Dwarves, you are an angry, drunken dwarf. Why are you so
+angry? Who knows. But you've decided to take your aggression out on other
+dwarves, by dropping gems on their heads. Lots of gems.
+
+Installing
+----------
+On Unix:
+ $ make check 		(optional)
+ $ su
+ Password: <enter it here>
+ # make install
+
+Then run 'angrydd'. Alternately, check the website to see if a
+package is available for your system.
+
+On Windows, simply unzipping the program and double-clicking 'angrydd.py'
+or 'angrydd.exe' should run it, if you have Python and Pygame
+installed. (Don't ask me for help getting it running on Windows.)
+
+Playing
+-------
+Angry, Drunken Dwarves is much like many other falling block games, so
+you can probably jump right in and play. The basic goal of the game is to
+combine gems of the same color into large crystals, then break them,
+dropping more gems on your opponent.
+
+Although the game is much more fun with gamepads, it can be played with
+the keyboard.
+
+		Player 1:		Player 2:
+		   w			   i
+Move:		 a   s			 j   l
+		   d			   k
+
+Rotate:		 q   e			 u   o
+
+Start:		Enter, 1	      2, Backspace
+
+Player 1 can also use the arrow keys.
+
+For the finer points on how to play, check the "How to Play" screen
+in the menu.
+
+Character Selection
+-------------------
+When you play two player games, Angry, Drunken Dwarves will ask you to
+pick a character to play. Besides the obvious importance of things like
+beard length, each character also has a 6x4 "drop gem pattern". This is
+the pattern by which gems are dropped onto an opponent's side. The more
+irregular the pattern, the tougher it is to prepare for. However, if
+the pattern is too random, your attack power will be lessened slightly.
+The converse is also true: If your pattern is very regular, you will drop
+more gems to compensate.
+
+Secrets
+-------
+There are hidden features in Angry, Drunken Dwarves! As you reach certain
+milestones, new things will appear in your game menus. (You should be able
+to find the first easily...)

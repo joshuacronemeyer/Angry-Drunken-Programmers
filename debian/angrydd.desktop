@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Angry Drunken Dwarves
+Comment="Falling blocks puzzle game"
+Exec=angrydd
+Icon=/usr/share/games/angrydd/angrydd.png
+Terminal=false
+Type=Application
+Categories=Game;BlocksGame;
+StartupNotify=false

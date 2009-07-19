@@ -1,0 +1,4 @@
+?package(angrydd):needs="X11" section="Games/Blocks"\
+  icon="angrydd.xpm"\
+  longtitle="AngryDD - falling blocks puzzle game"\
+  title="Angry Drunken Dwarves" command="/usr/games/angrydd"
